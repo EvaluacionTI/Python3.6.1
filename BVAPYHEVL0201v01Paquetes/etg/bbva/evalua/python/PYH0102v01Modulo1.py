@@ -9,7 +9,10 @@
 #==============================================================================
 class CEModulo1:
     def __init__(self):
+        self.descripcion = 'iniciar clase CEModulo1'
         print(self)
+    def show(self):
+        print(self.descripcion)
 
 def CEModulo():
     print("Clase CEModulo1")
