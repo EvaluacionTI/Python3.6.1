@@ -28,7 +28,7 @@ print("Rango de : ", range(5,30))
 for i in range(5,30):
     print(i)
 
-print("4. Forma 4 con range (n,m,) - lista desde n hasta m-1 con saltos de j")
+print("4. Forma 4 con range (n,m,j) - lista desde n hasta m-1 con saltos de j")
 print("Rango de : ", range(5,30, 22))
 for i in range(5,30, 22):
     print(i)

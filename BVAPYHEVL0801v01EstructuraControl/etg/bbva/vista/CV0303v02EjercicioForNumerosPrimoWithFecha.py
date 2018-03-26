@@ -10,24 +10,40 @@
 #                       1 y 1000. Utilizar range e if si son necesarios.
 #==============================================================================
 
+import time
+from datetime import datetime
+
+dFechaHoraInicio = time.strftime("%c")
+dFechaHoraInicial = datetime.now()
+
+## representacion de fecha y hora
+print("Fecha y hora : " + time.strftime("%c"))
+## representacion del tiempo
+print("Fecha "  + time.strftime("%x"))
+## representacion de la hora
+print("Hora " + time.strftime("%X"))
+## Muestra fecha y hora actual a partir de la variable
+print ("Fecha y hora de inicio : %s"  % dFechaHoraInicio )
+
+print("Fecha - Formato 24 horas : ", time.strftime("%H:%M:%S"))
+print("Fecha - Formato 12 horas : ", time.strftime("%I:%M:%S"))
+print("Fecha inicio : ", time.strftime("%d/%m/%y"))
+
 aListaPrimo = []
 for indice in range(1,1001):
-    print("Dividendo = ", indice)
     contador = 1
     aListaDivisores = []
 
     while(contador<=indice):
-        print("Divisor = ", contador)
-        cociente = indice / contador
         resto = indice % contador
-        print("Cociente =", cociente)
-        print("Resto = ", resto)
         contador += 1
         if resto==0:
             aListaDivisores.append(indice)
-    print(aListaDivisores)
     if len(aListaDivisores)==2:
         aListaPrimo.append(indice)
-    print("=" *40)
 
 print(aListaPrimo)
+dFechaHoraTermino = time.strftime("%c")
+dFechaHoraFinal = datetime.now()
+print("Fecha y hora final : %s " % dFechaHoraTermino)
+print("Tiempo proceso : ", (dFechaHoraFinal - dFechaHoraInicial))
