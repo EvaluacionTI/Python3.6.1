@@ -23,8 +23,20 @@ def verificarArchivo():
     except:
         print("Error inesperado", sys.exc_info()[0])
 
+
 def divisionPorCero():
     resultado = 15172027 / 0
+
+
+def dividir(x,y):
+    try:
+        result = x/y
+    except ZeroDivisionError:
+        print("División por cero")
+    else:
+        print("El resultado es", result)
+    finally:
+        print("Ejecutando la clausula finally")
 
 def principal():
     verificarArchivo()
@@ -32,5 +44,9 @@ def principal():
         divisionPorCero()
     except ZeroDivisionError as ex:
         print("Manejando error en tiempo de ejecución : ", ex)
+
+    dividir(12, 4)
+    dividir(10,0)
+    dividir("15","17")
 
 principal()
