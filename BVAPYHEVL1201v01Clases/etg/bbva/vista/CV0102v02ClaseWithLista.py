@@ -13,9 +13,9 @@
 class CEPerro:
     def __init__(self, psNombre):     #Método implicito que permite crear la instancion de
         self.sNombre = psNombre
-        self.aTruco = []    # Crea una nueva lista vacia para cada perro
-    def agregarTruco(self, aTruco):
-        self.aTrucos = aTruco
+        self.aTrucos = []    # Crea una nueva lista vacia para cada perro
+    def agregarTruco(self, sTruco):
+        self.aTrucos.append(sTruco)
 
 def principal():
     print("Clase CEPerro = ", CEPerro("Rotwailer"))
