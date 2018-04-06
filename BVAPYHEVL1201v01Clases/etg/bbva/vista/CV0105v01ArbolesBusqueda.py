@@ -11,30 +11,30 @@
 # derivada, el nombre de la clase base entre paréntesis
 #
 #==============================================================================
-class CEVehiculo:
-    def __init__(self, piValor):
-        self.iValor = piValor
-        print("Inicializa la base con un %d" % piValor)
-    def formato1(self, piNumero):
-        return "Formato 1 recibe un %d " % piNumero
+class CEArbol:
+    def __init__(self, elto):
+        self.elto = elto
+        self.izdo = None
+        self.dcho = None
 
-    def formato1(self, piNumero):
-       return "Formato 2 recibe un %d " % piNumero
+    def inserta(self, pNuevo):
+        if pNuevo == self.elto:
+            return self
+        elif pNuevo < self.elto:
+            if self.izdo == None:
+                self.izdo = CEArbol(pNuevo)
+            else:
+                self.izdo = self.izdo.inserta(pNuevo)
+        else:
+            if (self.dcho==None):
+                self.dcho = CEArbol(pNuevo)
+            else:
+                self.dcho=self.dcho.inserta(pNuevo)
+        return self
 
 
-class CEDerivada(CEVehiculo):
-    def __init__(self, piValor):
-        CEVehiculo.__init__(self, piValor)
-        self.iNuevoValorDerivado = piValor
-        print("Inicializa la clase derivada con un %d" % piValor)
-    def formato3(self, piNumero):
-        return "Formato 3 recibe un %d " % piNumero
+def principal():
+    oCEArbol = CEArbol(5)
+    print("Instancia de clase - oCEArbol : ", oCEArbol)
 
-
-oCEVehiculo = CEVehiculo(10)
-print("Clase Vechiculo : ", CEVehiculo(15))
-print("Valor de la instancia : ", oCEVehiculo.iValor)
-print("=" *80)
-oCEDerivada = CEDerivada(15)
-print("Clase derivada : ", oCEDerivada)
-print("metodo derivado formato3 : ", oCEDerivada.formato3(17))
+principal()
