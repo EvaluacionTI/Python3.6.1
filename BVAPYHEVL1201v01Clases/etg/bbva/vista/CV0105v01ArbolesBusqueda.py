@@ -32,9 +32,25 @@ class CEArbol:
                 self.dcho=self.dcho.inserta(pNuevo)
         return self
 
+    # Comprobar si un elemento está en el arbol
+    def estado(self, buscando):
+        if (buscando==self.elto):
+            return True
+        elif buscando < self.elto:
+            if self.izdo==None:
+                return False
+            else:
+                return self.izdo.estado(buscando)
+        else:
+            if self.dcho == None:
+                return False
+            else:
+                return self.dcho.estado(buscando)
 
 def principal():
     oCEArbol = CEArbol(5)
     print("Instancia de clase - oCEArbol : ", oCEArbol)
+    CEArbol(3).inserta(2).inserta(4)
+    print("Insertar : ", CEArbol)
 
 principal()
