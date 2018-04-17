@@ -15,3 +15,7 @@ id = re.Scanner
 idCompile = re.compile("[a-zA-Z][a-zA-Z0-9]*")
 print("re.Scanner = ", id)
 print("re.compile = ", idCompile)
+
+
+print(re.findall(r'\bt[a-z]*', 'tres felices tigres comen trigo'))
+print(re.sub(r'(\b[a-z]+) \1', r'\1', 'gato en el el sombrero'))
