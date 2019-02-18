@@ -32,10 +32,10 @@ voltaje('mil', estado = 'viendo crecer las flores desde abajo')
 
 print("Llamadas inválidas")
 print("=" *80)
-voltaje()                       # falta argumento obligatorio
-voltaje(tension=5.0, 'muerto')  # argumento posicional luego de uno nombrado
-voltaje(110, tension=220)       # valor duplicado para el mismo argumento
-voltaje(actor='Arnaldo Aranas') # nombre de argumento desconocido
+#voltaje()                       # falta argumento obligatorio
+#voltaje(tension=5.0, 'muerto')  # argumento posicional luego de uno nombrado
+#voltaje(110, tension=220)       # valor duplicado para el mismo argumento
+#voltaje(actor='Arnaldo Aranas') # nombre de argumento desconocido
 
 
 
