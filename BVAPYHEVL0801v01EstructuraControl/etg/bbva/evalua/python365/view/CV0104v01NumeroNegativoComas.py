@@ -2,7 +2,7 @@
 # Entidad			    :	Entelgy - Banco Continental
 # Proyecto			    :	EVL (Evaluación de Python 3.6.5.)
 # Módulo			    :
-# Fecha	Creación	:	15Ene2019
+# Fecha	Creación	:	18Ene2019
 # Objetivo			    :	Adicionar una coma a los importes para mejorar su visualización
 #
 # Fecha Edición		:
@@ -20,6 +20,7 @@ def ponerComa(pNumero):
 
     print("Número en cadena    : ", sNumeroCadena)
     print("Longitud de Número : ", iLongitudNumero)
+
     while iLongitudNumero > TOPE_TAMANO_MILES:
         iLongitudNumero = iLongitudNumero - TOPE_TAMANO_MILES
         print("Nueva Longitud de Número : ", iLongitudNumero)
@@ -31,5 +32,6 @@ def ponerComa(pNumero):
 
 
 print("Base Valor Exponente")
-for i in range(10):
-    print('%3d %20s' %(i, ponerComa(5**i)))
+for i in range(-100,-2):
+    print('%3d %20s' %(i, ponerComa(5000*i)))
+    #print('%3d  %20s' %(i, 3000*i))
