@@ -11,7 +11,7 @@
 #==============================================================================
 import urllib.request
 
-with urllib.request.urlopen('http://view.org/') as response:
+with urllib.request.urlopen('http://evalua.org/') as response:
    html = response.read()
    print(html)
 

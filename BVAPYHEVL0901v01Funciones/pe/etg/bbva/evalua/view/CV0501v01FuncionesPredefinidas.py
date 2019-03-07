@@ -19,7 +19,7 @@ def funcionesCadena():
     print("6. Devuelve el mínimo de una secuencia : ", min("Arquitectura"))
     print("7. Devuelve representaciones legibles ", str("Arquitectura"))
     print("1/7 = ", str(1/7))
-    print("8. Genera representaciones leibles por el interpre view ", repr("Arquitectura"))
+    print("8. Genera representaciones leibles por el interpre evalua ", repr("Arquitectura"))
     x = 10 * 3.25;
     y = 200 * 200;
     s = "El valor de x es " + repr(x) + ', y es ' + repr(y) + '...'
