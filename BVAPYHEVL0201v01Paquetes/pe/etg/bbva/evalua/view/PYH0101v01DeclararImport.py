@@ -5,7 +5,7 @@
 # Fecha	Creación	:	07Feb2018
 # Objetivo			:	Declarar paquetes
 # Fecha Edición		:
-# Descripción		:  Los paquetes son contenedores de programas view
+# Descripción		:  Los paquetes son contenedores de programas evalua
 #                      Los paquetes siempre deben iniciar con __init__.py
 #==============================================================================
 

@@ -21,6 +21,6 @@ print(" 3.0/2  =", 3.0/2)
 print(" 3.0/2.0=", 3.0/2.0)
 
 print("3. Entrada de datos")
-# Input como unico elemento de entrada. rwa_input descartado en view 3
+# Input como unico elemento de entrada. rwa_input descartado en evalua 3
 sRespuesta = input("Ingrese la Tasa Efectiva Anual : ")
 print("TEA = ", sRespuesta)
