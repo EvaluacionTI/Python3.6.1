@@ -15,41 +15,47 @@ TOPE_TAMANO_MILES = 3
 SIGNO_COMA = ','
 SIGNO_DECIMAL = "."
 
-# def ponerComa(pNumero):
-#     sNumeroCadena = str(pNumero)
-#     iLongitudNumero = len(sNumeroCadena)
-#     iPosicionPuntoDecimal = 0
-#     for j in range(iLongitudNumero):
-#         sCaracter = sNumeroCadena[j:1]
-#          if sCaracter==SIGNO_DECIMAL:
-#              iPosicionPuntoDecimal = j
-#             sParteEntera = sNumeroCadena[:j]
-#             sParteDecimal = sNumeroCadena[j:]
-#             break
-#          else:
-#             iPosicion = iPosicion + 1
-#
-#
-#         sNumeroCadena = sParteEntera
-#         while iLongitudNumero > TOPE_TAMANO_MILES:
-#             iLongitudNumero = iLongitudNumero - TOPE_TAMANO_MILES
-#             sNumeroCadena = sNumeroCadena[:iLongitudNumero] + SIGNO_COMA + sNumeroCadena[iLongitudNumero:]
-#
-#     return sNumeroCadena
+def ponerComa(pNumero):
+
+        sNumeroCadena = str(pNumero)
+        iLongitudNumero = len(sNumeroCadena)
+        iposicion_punto_decimal = 0
+
+
+        for j in range(iLongitudNumero):
+            print(j, sNumeroCadena[j], sNumeroCadena[j:], sNumeroCadena[:j])
+            scaracter = sNumeroCadena[j]
+            if scaracter == SIGNO_DECIMAL:
+                sparte_entera = sNumeroCadena[:j]
+                sparte_decimal = sNumeroCadena[j:]
+                iposicion_punto_decimal = j
+                break
+
+        if iposicion_punto_decimal != 0:
+            sNumeroCadena = sparte_entera
+            iLongitudNumero = len(sNumeroCadena)
+
+        while iLongitudNumero > TOPE_TAMANO_MILES:
+             iLongitudNumero = iLongitudNumero - TOPE_TAMANO_MILES
+             sNumeroCadena = sNumeroCadena[:iLongitudNumero] + SIGNO_COMA + sNumeroCadena[iLongitudNumero:]
+
+        return sNumeroCadena + sparte_decimal
+
 
 def principal():
 
     print("Base Valor Exponente")
-    sValorDecimal = input("Ingrese un valor decimal : ")
-    print(sValorDecimal)
-    iValorDecimal = float(sValorDecimal)+5.1
-    print(iValorDecimal)
+    svalor_decimal = input("Ingrese un valor decimal : ")
+    print(svalor_decimal)
+    fvalor_decimal = float(svalor_decimal)+5.1
+    print(fvalor_decimal)
     for i in range(1, 5):
-        print('%3d  %20s' %(i, iValorDecimal**i))
+        print('%3d  %20s' %(i, fvalor_decimal**i))
 
     print("=========================================")
     for i in range(1,5):
- #       print('%3d %20s' %(i, ponerComa(iValorDecimal**i)))
+       print('%3d %20s' %(i, ponerComa(fvalor_decimal**i)))
+
 
 principal()
 
