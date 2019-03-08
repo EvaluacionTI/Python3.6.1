@@ -25,13 +25,3 @@ confirmacion("Es Arquitectura Host ? : ")
 
 
 
-
-
-
-
-
-
-
-
-
-

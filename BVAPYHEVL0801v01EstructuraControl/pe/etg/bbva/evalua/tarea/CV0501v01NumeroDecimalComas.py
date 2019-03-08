@@ -15,30 +15,41 @@ TOPE_TAMANO_MILES = 3
 SIGNO_COMA = ','
 SIGNO_DECIMAL = "."
 
-def ponerComa(pNumero):
-    sNumeroCadena = str(pNumero)
-    for j in range(sNumeroCadena):
-         if sNumeroCadena[j:1]==SIGNO_DECIMAL:
-            sParteEntera = sNumeroCadena[j:]
-            sParteDecimal = sNumeroCadena[:j+1]
-            break
-
-    sNumeroCadena = sParteEntera
-    while iLongitudNumero > TOPE_TAMANO_MILES:
-        iLongitudNumero = iLongitudNumero - TOPE_TAMANO_MILES
-        sNumeroCadena = sNumeroCadena[:iLongitudNumero] + SIGNO_COMA + sNumeroCadena[iLongitudNumero:]
-
-    return sNumeroCadena
-
+# def ponerComa(pNumero):
+#     sNumeroCadena = str(pNumero)
+#     iLongitudNumero = len(sNumeroCadena)
+#     iPosicionPuntoDecimal = 0
+#     for j in range(iLongitudNumero):
+#         sCaracter = sNumeroCadena[j:1]
+#          if sCaracter==SIGNO_DECIMAL:
+#              iPosicionPuntoDecimal = j
+#             sParteEntera = sNumeroCadena[:j]
+#             sParteDecimal = sNumeroCadena[j:]
+#             break
+#          else:
+#             iPosicion = iPosicion + 1
+#
+#
+#         sNumeroCadena = sParteEntera
+#         while iLongitudNumero > TOPE_TAMANO_MILES:
+#             iLongitudNumero = iLongitudNumero - TOPE_TAMANO_MILES
+#             sNumeroCadena = sNumeroCadena[:iLongitudNumero] + SIGNO_COMA + sNumeroCadena[iLongitudNumero:]
+#
+#     return sNumeroCadena
 
 def principal():
 
     print("Base Valor Exponente")
-    iValorDecimal = input("Ingrese un valor decimal : ")
-    for i in range(-100,-2):
-        print('%3d %20s' %(i, ponerComa(5000*i)))
-    #print('%3d  %20s' %(i, 3000*i))
+    sValorDecimal = input("Ingrese un valor decimal : ")
+    print(sValorDecimal)
+    iValorDecimal = float(sValorDecimal)+5.1
+    print(iValorDecimal)
+    for i in range(1, 5):
+        print('%3d  %20s' %(i, iValorDecimal**i))
 
+    print("=========================================")
+    for i in range(1,5):
+ #       print('%3d %20s' %(i, ponerComa(iValorDecimal**i)))
 
 principal()
 
