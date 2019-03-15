@@ -11,7 +11,7 @@
 #==============================================================================
 
 print("Escribir un archivo")
-file = open("hostwrite.txt", "w")
+file = open("CV0201v01HostWrite.txt", "w")
 print(file)
 print(file.buffer)
 file.write("LE Libreta Electoral")

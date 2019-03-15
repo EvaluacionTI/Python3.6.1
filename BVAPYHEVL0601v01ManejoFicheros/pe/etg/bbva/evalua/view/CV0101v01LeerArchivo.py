@@ -10,7 +10,7 @@
 #==============================================================================
 
 print("Lectura de un archivo")
-file = open("host.txt")
+file = open("CV0101v01Host.txt")
 print(file)
 print(file.buffer)
 for linea in file.readline():

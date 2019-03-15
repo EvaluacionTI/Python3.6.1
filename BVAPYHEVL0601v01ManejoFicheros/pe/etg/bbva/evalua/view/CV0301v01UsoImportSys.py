@@ -20,7 +20,7 @@ class CVPrintRedirect:
         file.write(pMsg)
         file.close()
 
-sys.stdout = CVPrintRedirect('tmp.log')
+sys.stdout = CVPrintRedirect('CV0301v01LogSysTmp.log')
 print("Log de mensaje 1")
 print("Log de mensaje 2")
 print("Log de mensaje 3")
