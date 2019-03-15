@@ -1,14 +1,14 @@
 Mexico,D.F.
 Aguascalientes,Aguascalientes
-Tijuana,Baja.California
-Mexicali,Baja.California.Sur
+Tijuana,Baja California
+Mexicali,Baja California Sur
 Campeche,Campeche
-Tuxtla.Gutierrez,Chiapas
+Tuxtla Gutierrez,Chiapas
 Chihuahua,Chihuahua
 Saltillo,Coahuila
 Colima,Colima
 Durango,Durango
-Toluca,Edo.de.Mexico
+Toluca,Edo de Mexico
 Chilpancingo,Guerrero
 Guanajuato,Guanajuato
 Pachuca,Hidalgo
@@ -16,14 +16,14 @@ Guadalajara,Jalisco
 Morelia,Michoacán
 Cuernavaca,Morelos
 Tepic,Nayarit
-Monterrey,Nuevo.León
+Monterrey,Nuevo León
 Oaxaca,Oaxaca
 Puebla,Puebla
 Queretaro,Queretaro
-Chetumal,Quintana.Roo
+Chetumal,Quintana Roo
 Culiacan,Sinaloa
 Hermosillo,Sonora
-San.Luis.Potosi,San.Luis.Potosi
+San Luis Potosi,San Luis Potosi
 Villa.Hermosa,Tabasco
 Tampico,Tamaulipas
 Tlaxcala,Tlaxcala
