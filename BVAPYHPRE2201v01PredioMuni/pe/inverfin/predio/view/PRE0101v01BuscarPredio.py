@@ -14,42 +14,46 @@
 #==============================================================================
 import tkinter as oFormat
 
+oVentanaPrincipal = oFormat.Tk()
 
-def ventana_padre(): # 1. Declarar la ventana padre
-    oWindowRoot = oFormat.Tk()
-    oWindowRoot.title("Módulo de Predios")
 
-    oWindowRoot.config(bg="pink")       # Color de fondo de la ventana
-    oWindowRoot.geometry("800x600") # Tamaño de la ventana 800 pixel de ancho y 600 de alto
-    return oWindowRoot
+def ventana_padre(poVentanaPrincipal): # 1. Declarar la ventana padre
+    poVentanaPrincipal.title(".....[ Módulo de Predios ].....")
 
-# 2. Declarar Etiquetas
-#oLabelDireccion = oFormat.Label(oWindowRoot, text="Arquitectura HOST / APX ", font=("Arial Bold", 20), bg="green", fg="blue")
-#oLabelDireccion.grid(column=0, row=0)
+    poVentanaPrincipal.config(bg="pink")       # Color de fondo de la ventana
+    poVentanaPrincipal.geometry("800x600") # Tamaño de la ventana 800 pixel de ancho y 600 de alto
+    return poVentanaPrincipal
 
-#oLabelMostrarTexto = oFormat.Label(oWindowRoot, text="", font=("Verdana", 17), bg="yellow", fg="brown")
-#oLabelMostrarTexto.grid(column=1, row=1)
+def declarar_etiquetas(poWindowRoot):  # 2. Declarar Etiquetas
+    tituloRegistro = "Búsqueda de Predios por Dirección"
+
+    oLabelTitulo = oFormat.Label(poWindowRoot, text=tituloRegistro, anchor="center", width=80, font=("Arial Bold", 16), bg="green", fg="blue")
+    oLabelTitulo.grid(column=0, row=0)
+
+    oLabelDireccion = oFormat.Label(poWindowRoot, text="Dirección de búsqueda : ", anchor="w", font=("Verdana", 12))
+    oLabelDireccion.grid(column=0, row=1)
 
 # 3. Declarar la entrada de datos
-#oTexto = oFormat.Entry(oWindowRoot, width=10)
-#oTexto.grid(column=2, row=3)
-#oTexto.focus()
+    oTextoDireccion = oFormat.Entry(poWindowRoot, width=40, font=("Verdana", 12))
+    oTextoDireccion.grid(column=0, row=2)
+    oTextoDireccion.focus()
 
-#oTextoDisabled = oFormat.Entry(oWindowRoot, width=20, state='disabled')
-#oTextoDisabled.grid(column=2, row=4)
+    oButton = oFormat.Button(poWindowRoot, text="Procesar", bg="orange", fg="white", command=procesarClicled)
+    oButton.grid(column=0, row=3)
 
 
 # 4. Declarar Botones
-#def clicked():
- #   oCapturaEntry = "Ud ha escrito : " + oTexto.get()
- #   oLabelMostrarTexto.configure(text=oCapturaEntry)
+def procesarClicled():
+   #oCapturaEntry = "Ud ha escrito : " + oTextoDireccion.get()
+   print("Ud. esta procesando")
+#   oLabelMostrarTexto.configure(text=oCapturaEntry)
 
 
-#oButton = oFormat.Button(oWindowRoot, text="Pulsar Click", bg="orange", fg="white", command=clicked)
-#oButton.grid(column=0, row=5)
+
 
 def principal():
-    oventana = ventana_padre()
+    oventana = ventana_padre(oVentanaPrincipal)
+    declarar_etiquetas(oventana)
     oventana.mainloop()      # Evento que llama al inicio de nuestro programa
 
 
