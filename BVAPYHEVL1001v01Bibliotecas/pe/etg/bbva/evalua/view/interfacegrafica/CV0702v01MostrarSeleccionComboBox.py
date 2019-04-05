@@ -30,18 +30,30 @@ oLabel.grid(column=0, row=0)
 oLabelCombo = oFormat.Label(oWindowRoot, text="Lista de canal :  ", font=("Verdana", 12))
 oLabelCombo.grid(column=0, row=1)
 
-oLabelMostrarValorCombo = oFormat.Label(oWindowRoot, text="", font=("Verdana", 12), bg="brown", fg="white")
+oLabelMostrarValorCombo = oFormat.Label(oWindowRoot, text="Mostrar elemento seleccionado", font=("Verdana", 12), bg="brown", fg="white")
 oLabelMostrarValorCombo.grid(column=0, row=2)
+
+
+def fnc_selected_changed(self):
+    print(self)
+    elementoSeleccionado = oComboCanal.get()
+    indiceElementoSeleccionado = oComboCanal.current()
+    print(elementoSeleccionado)
+    print(indiceElementoSeleccionado)
+    oLabelMostrarValorCombo.configure(text=elementoSeleccionado)
 
 # 3. Declarar el combo
 oComboCanal = oFormatCombo(oWindowRoot)
+# 3.1 Elementos del combo
 oComboCanal['values'] = ('MN', 'MG', 'PH', 'SF', 'XA', 15, 17, 20, 27)
-# Los valores de la posición inician en 0
-oComboCanal.current(3)  # set the selected item
+# 3.2 Los valores de la posición inician en 0
+#oComboCanal.current(3)  # set the selected item
+# 3.3 Mostrar el combo
 oComboCanal.grid(column=1, row=1)
 oComboCanal.focus()
+oComboCanal.bind("<<ComboboxSelected>>", fnc_selected_changed)
 
-oLabelMostrarValorCombo.configure(text=oComboCanal.get())
+
 
 
 oWindowRoot.mainloop()      # Evento que llama al inicio de nuestro programa
