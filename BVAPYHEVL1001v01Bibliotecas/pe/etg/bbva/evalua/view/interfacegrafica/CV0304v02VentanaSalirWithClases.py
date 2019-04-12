@@ -7,50 +7,41 @@
 #                                  :
 # Procedimiento       :   Ventana con un boton Salir
 #
-# Al presionar el botón la aplicación termina su ejecución.
-# Una ventana es el elemento fundamental de una aplicación GUI.
-# Es el primer objeto que se crea y sobre éste se colocan el resto de objetos
-# llamados widgets (etiquetas, botones, etc.).
+# Se va utilizar la programacion orientada a objetos es preferible. Si vamos a trabajar con Tkinter
+# es lo más adecuado, sobre todo, porque facilita la gestión de los widgets y de los eventos que se
+# producen en las aplicaciones. Desde luego, todo van a ser ventajas.
 #==============================================================================
-# 1.0 Las dos líneas siguientes son necesaias para hacer
-# compatible el interfaz Tkinter con los programas basados
-# en versiones anteriores a la 8.6.6, con las más recientes.
+from tkinter import *
+from tkinter import ttk
 
-import tkinter as oFormat        # Carga módulo tk (widgets estándar)
-from tkinter import ttk             # Carga ttk (para widgets nuevos 8.5+)
+# Crea una clase Python para definir el interfaz de usuario de
+# la aplicación. Cuando se cree un objeto del tipo 'Aplicacion'
+# se ejecutará automáticamente el método __init__() qué
+# construye y muestra la ventana con todos sus widgets:
 
+class Aplicacion():
+    def __init__(self):
+        raiz = Tk()
+        raiz.geometry('300x200')
+        raiz.configure(bg = 'beige')
+        raiz.title('Aplicación')
+        ttk.Button(raiz, text='Salir',
+                   command=raiz.destroy).pack(side=BOTTOM)
+        raiz.mainloop()
 
-# 2.0 Define la ventana principal de la aplicación
+# Define la función main() que es en realidad la que indica
+# el comienzo del programa. Dentro de ella se crea el objeto
+# aplicación 'mi_app' basado en la clase 'Aplicación':
 
-oWindowRoot = oFormat.Tk()
+def main():
+    mi_app = Aplicacion()
+    return 0
 
-# 3.0 Define las dimensiones de la ventana, que se ubicará en el centro de la pantalla.
-# Si se omite esta línea la  ventana se adaptará a los widgets que se coloquen en
-# ella.
+# Mediante el atributo __name__ tenemos acceso al nombre de un
+# un módulo. Python utiliza este atributo cuando se ejecuta
+# un programa para conocer si el módulo es ejecutado de forma
+# independiente (en ese caso __name__ = '__main__') o es
+# importado:
 
-oWindowRoot.geometry('800x600') # anchura x altura
-
-# 4.0 Asigna un color de fondo a la ventana. Si se omite esta línea el fondo será gris
-
-oWindowRoot.configure(bg = 'beige')
-
-# 5.0 Asigna un título a la ventana
-
-oWindowRoot.title('Evaluación de Python')
-
-# 6.0 Define un botón en la parte inferior de la ventana
-# que cuando sea presionado hará que termine el programa.
-# El primer parámetro indica el nombre de la ventana 'raiz'
-# donde se ubicará el botón
-
-ttk.Button(oWindowRoot, text='Salir', command=quit).pack(side=oFormat.BOTTOM)
-
-# 7.0 Después de definir la ventana principal y un widget botón
-# la siguiente línea hará que cuando se ejecute el programa
-# construya y muestre la ventana, quedando a la espera de
-# que alguna persona interactúe con ella.
-
-# Si la persona presiona sobre el botón Cerrar 'X', o bien,
-# sobre el botón 'Salir' el programa llegará a su fin.
-
-oWindowRoot.mainloop()
+if __name__ == '__main__':
+    main()
