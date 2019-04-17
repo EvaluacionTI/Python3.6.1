@@ -14,19 +14,27 @@
 class CEConstanteSQLite:
     ARCHIVO_DB = "F:\BBVA11SQLite\INVFINDesarrollo.bd"
 
+    DROP_CONTRIBUYENTE = "DROP TABLE IF EXISTS PREt01_contribuyente";
+    DROP_CONTRIBUYENTE = "DROP TABLE IF EXISTS PREt01_contribuyente";
+    DROP_CONTRIBUYENTE = "DROP TABLE IF EXISTS PREt01_contribuyente";
+
     TABLE_CONTRIBUYENTE = '''
         CREATE TABLE PREt01_contribuyente(
             id_contribuyente            INT,
-            cod_contribuyente         TEXT,
-            txt_direccion_contri      TEXT,
+            cod_contri                       TEXT,
+            txt_nro_doc                     TEXT,
+            txt_ape_nom_contri       TEXT,
+            txt_direc_contri              TEXT,
             txt_path_hr                      TEXT,
             txt_path_hp                     TEXT,
-            fec_sistema                     TEXT
+            fec_sistema                     TEXT,
+            
+            CONSTRAINT PKPREt01_id_contribuyente PRIMARY KEY(id_contribuyente)
     '''
 
     TABLE_PREDIO = '''
         CREATE TABLE PREt02_predio(
-            id_predio_foto                 INT,
+            id_predio                          INT,
             nro_periodo                      INT,
             id_contribuyente             INT,            
             cod_predio                       TEXT,
@@ -34,7 +42,9 @@ class CEConstanteSQLite:
             txt_nro_lote_otro            TEXT,
              sn_cargado                      BOOLEAN,
             fec_cargado                     TEXT,
-            fec_sistema                     TEXT            
+            fec_sistema                     TEXT,
+            CONSTRAINT PKPREt02_predio PRIMARY KEY(id_predio, nro_periodo),
+            CONSTRAINT FKPREt02_id_contribuyente FOREIGN KEY id_contribuyente REFERENCES PREt01_contribuyente (id_contribuyente) 
     '''
 
     TABLE_PREDIO_FOTO = '''
@@ -53,9 +63,10 @@ class CEConstanteSQLite:
             img_path_new_foto1       BLOB,
             img_path_new_foto2       BLOB,
             img_path_new_foto3       BLOB,
-            fec_sistema                       TEXT            
+            fec_sistema                       TEXT,
             
-            CONSTRAINT PKPREt01_id_txt_periodo PRIMARY KEY(id_predio_foto, nro_periodo)
+            CONSTRAINT PKPREt03_predio_foto PRIMARY KEY(id_predio_foto, nro_periodo),
+            CONSTRAINT FKPREt03_predio           FOREIGN KEY (id_predio_foto,  nro_periodo) REFERENCES PREt02_predio (id_predio, nro_periodo)
         )
     '''
 
