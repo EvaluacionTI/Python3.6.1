@@ -14,12 +14,12 @@
 class CEConstanteSQLite:
     ARCHIVO_DB = "F:\BBVA11SQLite\INVFINDesarrollo.bd"
 
-    DROP_CONTRIBUYENTE = "DROP TABLE IF EXISTS PREt01_contribuyente";
-    DROP_CONTRIBUYENTE = "DROP TABLE IF EXISTS PREt01_contribuyente";
+    DROP_CONTRIBUYENTE = "DROP TABLE IF EXISTS PREt03_predio_foto";
+    DROP_CONTRIBUYENTE = "DROP TABLE IF EXISTS PREt02_predio";
     DROP_CONTRIBUYENTE = "DROP TABLE IF EXISTS PREt01_contribuyente";
 
     TABLE_CONTRIBUYENTE = '''
-        CREATE TABLE PREt01_contribuyente(
+        CREATE TABLE IF NOT EXISTS PREt01_contribuyente(
             id_contribuyente            INT,
             cod_contri                       TEXT,
             txt_nro_doc                     TEXT,
@@ -33,7 +33,7 @@ class CEConstanteSQLite:
     '''
 
     TABLE_PREDIO = '''
-        CREATE TABLE PREt02_predio(
+        CREATE TABLE IF NOT EXISTS PREt02_predio(
             id_predio                          INT,
             nro_periodo                      INT,
             id_contribuyente             INT,            
@@ -48,7 +48,7 @@ class CEConstanteSQLite:
     '''
 
     TABLE_PREDIO_FOTO = '''
-        CREATE TABLE PREt03_predio_foto(
+        CREATE TABLE IF NOT EXISTS PREt03_predio_foto(
             id_predio_foto                 INT,
             nro_periodo                     INT,
             txt_path_foto1                TEXT,

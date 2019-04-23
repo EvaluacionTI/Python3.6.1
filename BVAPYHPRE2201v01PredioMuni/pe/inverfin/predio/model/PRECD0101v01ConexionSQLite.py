@@ -10,11 +10,11 @@
 #
 #==============================================================================
 import sqlite3 as oFormatSQLite
-import pe.inverfin.predio.entity.PRECE0101v01ConstanteSQLite as oFormatConstante
+import BVAPYHPRE2201v01PredioMuni.pe.inverfin.predio.entity.PRECE0101v01ConstanteSQLite as oFormatConstante
 
-class CDDatabaseSQLite:
 
 #    db = 'F:\BBVA11SQLite\INVFINDesarrollo.bd'
+class CDDatabaseSQLite:
 
     def __init__(self):
         self.connection = oFormatSQLite.connect(oFormatConstante.CEConstanteSQLite.ARCHIVO_DB)

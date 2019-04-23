@@ -6,7 +6,7 @@
 # Objetivo			        :   Conexion a SQLite
 #                                  :
 # Procedimiento       :   Si la bd no existe en la ruta especificada lo crea
-#
+#                                      Crear la base de datos en memoria o en fisico
 #
 #==============================================================================
 import sqlite3 as oConexionSQLite
