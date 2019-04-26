@@ -12,6 +12,7 @@
 import cx_Oracle as oFormatDB
 
 ipaddress = '127.0.0.1'
+# username = 'DIP'
 username = 'sys'
 password = 'aemsa152027'
 port = '1521'
