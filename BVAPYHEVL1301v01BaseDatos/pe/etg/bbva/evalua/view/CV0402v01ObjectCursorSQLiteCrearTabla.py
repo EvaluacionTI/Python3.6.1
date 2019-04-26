@@ -12,9 +12,9 @@
 #==============================================================================
 import sqlite3 as oConexionSQLite
 
-oArchivoDB = "F:\BBVA11SQLite\INVFINDesarrollo.bd"
-TABLE_PREDIO = '''
-    CREATE TABLE PREt01_empresa(
+oArchivoDB = "F:\BBVA11SQLite\BBVARQUITECTURA.sqlite3"
+TABLE_EMPLEADO = '''
+    CREATE TABLE EVLt01_empleado(
         id                 INT PRIMARY KEY,
         txt_nom     TEXT    NOT NULL,
         edad            INT      NOT NULL,
@@ -22,11 +22,10 @@ TABLE_PREDIO = '''
         salario         REAL)
 '''
 
-
 oCxn = oConexionSQLite.connect(oArchivoDB)
 oCursor = oCxn.cursor()
 
 print("Dirección de conexion : ", oCxn)
-oCursor.execute(TABLE_PREDIO)
+oCursor.execute(TABLE_EMPLEADO)
 oCxn.commit()
 oCxn.close()

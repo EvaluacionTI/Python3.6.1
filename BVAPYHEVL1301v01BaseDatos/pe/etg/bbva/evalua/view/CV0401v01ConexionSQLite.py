@@ -11,7 +11,7 @@
 #==============================================================================
 import sqlite3 as oConexionSQLite
 
-oArchivoDB = "F:\BBVA11SQLite\INVFINDesarrollo.bd"
+oArchivoDB = "F:\BBVA11SQLite\BBVARQUITECTURA.sqlite3"
 oArchivoMM = ":memory:"
 
 oCxn = oConexionSQLite.connect(oArchivoDB)

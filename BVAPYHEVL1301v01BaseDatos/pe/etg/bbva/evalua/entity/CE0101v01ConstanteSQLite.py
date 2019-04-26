@@ -13,7 +13,7 @@
 
 class CEConstanteSQLite:
     def __init__(self):
-        self.ARCHIVO_DB = "F:\BBVA11SQLite\INVFINDesarrollo.bd"
+        self.ARCHIVO_DB = "F:\BBVA11SQLite\BBVARQUITECTURA.sqlite3"
 
         self.DROP_CONTRIBUYENTE = "DROP TABLE IF EXISTS PREt01_contribuyente"
         self.DROP_PREDIO = "DROP TABLE IF EXISTS PREt02_predio"
