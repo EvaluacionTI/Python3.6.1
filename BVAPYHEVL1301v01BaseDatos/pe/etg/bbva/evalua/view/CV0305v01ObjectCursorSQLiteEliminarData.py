@@ -11,8 +11,8 @@
 #==============================================================================
 import sqlite3 as oConexionSQLite
 
-oArchivoDB = "F:\BBVA11SQLite\INVFINDesarrollo.bd"
-DELETE_PREDIO = "DELETE FROM PREt01_empresa WHERE id=5"
+oArchivoDB = "F:\BBVA11SQLite\BBVARQUITECTURA.sqlite3"
+DELETE_PREDIO = "DELETE FROM EVLt02_empleado WHERE id=5"
 
 oCxn = oConexionSQLite.connect(oArchivoDB)
 print("Dirección de conexion : ", oCxn)

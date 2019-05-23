@@ -13,8 +13,9 @@
 import sqlite3 as oConexionSQLite
 
 oArchivoDB = "F:\BBVA11SQLite\BBVARQUITECTURA.sqlite3"
+DROP_TABLE_EMPLEADO = "DROP TABLE IF EXISTS EVLt02_empleado"
 TABLE_EMPLEADO = '''
-    CREATE TABLE EVLt01_empleado(
+    CREATE TABLE EVLt02_empleado(
         id                 INT PRIMARY KEY,
         txt_nom     TEXT    NOT NULL,
         edad            INT      NOT NULL,
@@ -26,6 +27,7 @@ oCxn = oConexionSQLite.connect(oArchivoDB)
 oCursor = oCxn.cursor()
 
 print("Dirección de conexion : ", oCxn)
+oCursor.execute(DROP_TABLE_EMPLEADO)
 oCursor.execute(TABLE_EMPLEADO)
 oCxn.commit()
 oCxn.close()

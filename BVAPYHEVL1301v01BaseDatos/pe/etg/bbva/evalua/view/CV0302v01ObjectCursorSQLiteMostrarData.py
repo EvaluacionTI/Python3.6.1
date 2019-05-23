@@ -11,8 +11,8 @@
 #==============================================================================
 import sqlite3 as oConexionSQLite
 
-oArchivoDB = "F:\BBVA11SQLite\INVFINDesarrollo.bd"
-SELECT_PREDIO = "SELECT * FROM PREt01_empresa "
+oArchivoDB = "F:\BBVA11SQLite\BBVARQUITECTURA.sqlite3"
+SELECT_PREDIO = "SELECT * FROM EVLt02_empleado "
 
 oCxn = oConexionSQLite.connect(oArchivoDB)
 print("Dirección de conexion : ", oCxn)

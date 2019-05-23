@@ -11,8 +11,8 @@
 #==============================================================================
 import sqlite3 as oConexionSQLite
 
-oArchivoDB = "F:\BBVA11SQLite\INVFINDesarrollo.bd"
-UPDATE_PREDIO = "UPDATE PREt01_empresa SET salario = 4500 WHERE id=2"
+oArchivoDB = "F:\BBVA11SQLite\BBVARQUITECTURA.sqlite3"
+UPDATE_PREDIO = "UPDATE EVLt02_empleado SET salario = 4500 WHERE id=2"
 
 oCxn = oConexionSQLite.connect(oArchivoDB)
 print("Dirección de conexion : ", oCxn)
