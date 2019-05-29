@@ -21,7 +21,6 @@
 #
 #==============================================================================
 import matplotlib.pyplot as oFormatPlt
-import numpy as oFormarNpy
 
 ejeX = range(17)
 oFormatPlt.plot(ejeX)
