@@ -10,8 +10,9 @@ derby.log
 
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm
 
-*.iml
+__pycache__/
 
+*.iml
 .classpath
 .project
 
